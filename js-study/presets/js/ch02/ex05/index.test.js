@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { promisify } from "util";
 import { exec } from "child_process";
 
