@@ -15,10 +15,11 @@ class DefaultMap extends Map {
   }
 }
 
+// prettier-ignore
 class Histogram {
   constructor() {
-    this.letterCounts = new DefaultMap(0);
-    this.totalLetters = 0;
+    this.letterCounts = new DefaultMap(0)
+    this.totalLetters = 0
   }
   // prettier-ignore
   add(text) {
@@ -27,7 +28,7 @@ class Histogram {
     for (const character of text) {
       const count = this.letterCounts.get(character)
       this.letterCounts.set(character, count + 1)
-      this.totalLetters++;
+      this.totalLetters++
     }
   }
   // prettier-ignore
@@ -41,7 +42,7 @@ class Histogram {
       } else {
         return b[1] - a[1]
       }
-    });
+    })
 
     for (const entry of entries) {
       entry[1] = (entry[1] / this.totalLetters) * 100
